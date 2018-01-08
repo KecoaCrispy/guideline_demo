@@ -1,0 +1,5 @@
+[13-Oct-2017 15:51:46 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/citcallc/public_html/demo/conn.php on line 9
+[13-Oct-2017 15:52:53 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'citcallc_root'@'localhost' to database 'citcallc_demo' in /home/citcallc/public_html/demo/conn.php on line 9
+[02-Nov-2017 22:28:14 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/citcallc/public_html/demo/conn.php on line 9
+[02-Nov-2017 22:28:22 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/citcallc/public_html/demo/conn.php on line 9
+[02-Nov-2017 22:28:28 Asia/Jakarta] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/citcallc/public_html/demo/conn.php on line 9
