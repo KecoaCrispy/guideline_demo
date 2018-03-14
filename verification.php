@@ -143,19 +143,18 @@ session_destroy();
 						$("#cellNo").attr("readonly", false);
 						setTimeout(function(){ $(".account-timeout").show(); }, 20000);
 						var first = data.first;
-						var length = data.length;
-						var maxlength = length.toString().length;
+						var panjang = data.panjang;
+						//var maxlength = panjang.toString().length;
 						trxId = data.trx_id;
-						$("#cellNo").inputmask(first + " 9999",{
+						$("#cellNo").inputmask(first + "9999",{
 							placeholder: "x",
 						});
 						$('#cellNo').on('input', function() {
 							var value = $('#cellNo').val();
 							var res = value.replace("x", "");
-							console.log('maxlenth: '+ res.length);
-							console.log('res length : '+ res.length);
-							var maxlenghtbaru = maxlength + 2;
-							if (res.length == maxlenghtbaru) {
+							console.log('maxlenth: '+ panjang);
+							
+							if (res.length == panjang) {
 								console.log(value.length);
 								verifyCode();
 							}

@@ -52,7 +52,7 @@ if ($err) {
 
 		$ret['trx_id'] = $trx_id;
 		$ret['first'] = $first;
-		$ret['length'] = $length;
+		$ret['panjang'] = $length;
 		$ret['result'] = "Success";
 	}else{
 		$ret['result'] = "Failed";
