@@ -166,8 +166,14 @@ session_destroy();
 				},
 				error: function (parsedjson, textStatus, errorThrown) {
 					$(".jconfirm-open").hide();
-					return swal("Error", JSON.stringify(parsedjson).responseText, "error");
-					console.log("ERRO parsedJson: " + JSON.stringify(parsedjson));
+					swal({ 
+					  title: "Error",
+					   text: "Please check your internet connection and try again",
+					    type: "error" 
+					  },
+					  function(){
+					    window.location.href = 'index.php';
+					});
 				}
 			});
 		}
