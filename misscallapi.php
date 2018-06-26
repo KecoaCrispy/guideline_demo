@@ -5,18 +5,21 @@
 */
 ini_set('max_execution_time', 60);
 if(!isset($_POST["cid"]) || !isset($_POST["trying"])){
-  header("location: index.php");
+	header("location: index.php");
 }
 include "conn.php";
 $msisdn = $_POST["cid"];
-$base_url = 'http://104.199.196.122/gateway';
-$version = '/v1';
+
+$userid = 'USERID'; //place your userid here
+$apikey = 'APIKEY'; //place your API key here
+$auth = base64_encode($userid . ':' . $apikey);
+
+$base_url = 'https://gateway.citcall.com';
+$version = '/v3';
 $action = '/call';
 $url = $base_url . $version . $action ;
 
 $data = array(
-    "userid" => "USERNAME",
-	"password" => "PASSWORD",
     "msisdn" => $msisdn,
     "gateway" => $_POST["trying"]
 );
@@ -28,6 +31,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/json',
+	'Authorization': . $auth,
     'Content-Length: ' . strlen($content))
 );
 $response = curl_exec($curl);
